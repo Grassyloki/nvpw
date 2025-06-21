@@ -24,12 +24,12 @@ sudo chmod +x /usr/local/bin/nvpw
 
 3. (Optional) Auto-disable GPU at boot:
 ```bash
-sudo vim /etc/systemd/system/gpu-off.service
+sudo vim /etc/systemd/system/nvpw-gpu-off.service
 ```
 Copy the systemd service content, save and exit (`:wq`)
 
 ```bash
-sudo systemctl enable gpu-off.service
+sudo systemctl enable nvpw-gpu-off.service
 ```
 
 ## Usage
