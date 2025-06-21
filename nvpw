@@ -128,7 +128,7 @@ turn_off() {
     fi
     
     print_status "info" "Setting persistence mode..."
-    if ! sudo nvidia-smi -i "$GPU_ADDRESS" -pm 1; then
+    if ! sudo nvidia-smi -i "$GPU_ADDRESS" -pm 0; then
         print_status "error" "Failed to set persistence mode"
         return 1
     fi
