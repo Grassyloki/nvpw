@@ -1,0 +1,13 @@
+[Unit]
+Description=Disable NVIDIA GPU at boot
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/nvpw off
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
